@@ -5,13 +5,14 @@ import MapView from 'react-native-maps';
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
 
-export default () => {
-    return (<MapView style={styles.map}/>);
+export default ({ onLongPress }) => {
+
+    return (<MapView style={styles.map} onLongPress={onLongPress}/>);
 }
 
 const styles = StyleSheet.create({
     map: {
-        height: height,
+        height: height - 100,
         width: width,
       },
 });

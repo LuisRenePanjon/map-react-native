@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Dimensions, StyleSheet, Text, Modal, View } from 'react-native';
 
 const height = Dimensions.get('window').height;
 const width = Dimensions.get('window').width;
 
 export default () => {
+    const [showOrHideModal, setShowOrHideModal] = useState(false);
+    
     return (
         <Modal
             animationType="fade"
-            transparent={true}
-            visible={true} 
+            transparent={true} 
+            visible={showOrHideModal} 
             onRequestClose={()=>{
 
             }}
